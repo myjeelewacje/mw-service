@@ -1,0 +1,26 @@
+OSTATECZNA NAPRAWA RAILWAY BUILD
+
+Błąd:
+sh: 1: next: not found
+
+Ta poprawka wymusza:
+- Node 20
+- instalację dependencies i devDependencies
+- użycie npx next@14.2.35 przy build i start
+- aktualny package-lock.json
+
+Podmień/dodaj w głównym folderze repo mw-service:
+- package.json
+- package-lock.json
+- railway.toml
+- nixpacks.toml
+- .nvmrc
+
+Potem GitHub Desktop:
+Summary:
+Fix Railway build command
+
+Commit to main
+Push origin
+
+Po push Railway zrobi deploy ponownie.
