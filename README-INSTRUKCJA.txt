@@ -1,11 +1,11 @@
-POPRAWKA — ODSTĘP PRZYCISKÓW I LOGO
+MW SERVICE — OPCJA 3 KOMINIARZ + UZGODNIONE LOGO
 
-Poprawione:
-- większy odstęp między haczykami a przyciskami w hero
-- przyciski nie kleją się już do tekstu
-- nowe czarne logo bez tła, dopasowane do nagłówka
-- napis SERVICE w logo jest większy i czytelniejszy
-- CSS/logo podbite do v9, żeby nie łapało starej wersji
+Zrobione:
+- dodana opcja 3: karta Schoorsteenreiniging przy formularzu
+- logo jest wzięte z przesłanego wzoru i zapisane jako PNG z przezroczystym tłem
+- logo nie jest już generowane ani zmieniane na inne
+- CSS/logo podbite do v10
+- cache wyłączony w nginx
 
 CO ZROBIĆ:
 1. Wejdź do folderu repo mw-service.
@@ -15,7 +15,7 @@ CO ZROBIĆ:
 
 Musi być:
 mw-service/index.html
-mw-service/style-v9.css
+mw-service/style-v10.css
 mw-service/script-v4.js
 mw-service/Dockerfile
 mw-service/nginx.conf.template
@@ -25,7 +25,7 @@ mw-service/projecten/
 
 GitHub Desktop:
 Summary:
-Fix hero button spacing and logo
+Add chimney shortcut and fixed logo
 
 Commit to main
 Push origin
