@@ -1,5 +1,5 @@
 import Link from 'next/link'
-import { PROJECTS } from '@/data/projects'
+import { PROJECTS } from '../../data/projects'
 
 export default function ProjectenPage() {
   return (

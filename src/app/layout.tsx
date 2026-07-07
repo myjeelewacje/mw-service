@@ -1,6 +1,6 @@
 import './globals.css'
 import type { Metadata } from 'next'
-import { COMPANY } from '@/data/site'
+import { COMPANY } from '../data/site'
 
 export const metadata: Metadata = {
   title: `${COMPANY.name} | Dakreiniging, gevelreiniging en schoorsteenreiniging`,

@@ -1,7 +1,7 @@
 import Link from 'next/link'
 import { notFound } from 'next/navigation'
-import { BeforeAfterSlider } from '@/components/BeforeAfterSlider'
-import { PROJECTS, getProject } from '@/data/projects'
+import { BeforeAfterSlider } from '../../../components/BeforeAfterSlider'
+import { PROJECTS, getProject } from '../../../data/projects'
 
 export function generateStaticParams() {
   return PROJECTS.map((project) => ({ slug: project.slug }))

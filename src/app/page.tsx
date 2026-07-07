@@ -1,8 +1,8 @@
 import Link from 'next/link'
-import { HeroSection } from '@/components/HeroSection'
-import { BeforeAfterSlider } from '@/components/BeforeAfterSlider'
-import { BENEFITS, COMPANY, NAV_ITEMS, PROCESS, SERVICES } from '@/data/site'
-import { PROJECTS } from '@/data/projects'
+import { HeroSection } from '../components/HeroSection'
+import { BeforeAfterSlider } from '../components/BeforeAfterSlider'
+import { BENEFITS, COMPANY, NAV_ITEMS, PROCESS, SERVICES } from '../data/site'
+import { PROJECTS } from '../data/projects'
 
 export default function HomePage() {
   return (

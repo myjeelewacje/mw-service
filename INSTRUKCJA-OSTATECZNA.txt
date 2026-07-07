@@ -1,0 +1,31 @@
+OSTATECZNA PACZKA — BEZ IMPORTÓW @
+
+Problem na Railway:
+Module not found: Can't resolve '@/data/site'
+
+W tej paczce usunąłem importy z @ i zamieniłem je na zwykłe ścieżki względne.
+Build został sprawdzony lokalnie i przechodzi.
+
+CO ZROBIĆ:
+1. Wejdź do folderu repo mw-service.
+2. Usuń wszystko ze środka oprócz folderu .git, jeśli go widzisz.
+3. Rozpakuj ten ZIP.
+4. Wklej zawartość ZIP-a bezpośrednio do folderu mw-service.
+
+Musi być:
+mw-service/src/app/page.tsx
+mw-service/src/components/HeroSection.tsx
+mw-service/src/data/site.ts
+mw-service/src/data/projects.ts
+mw-service/package.json
+mw-service/railway.toml
+
+Nie może być:
+mw-service/MW-SERVICE-opcja-3-NAPRAWA-BEZ-ALIASOW/src/...
+
+GitHub Desktop:
+Summary:
+Fix MW Service imports and full project
+
+Commit to main
+Push origin
