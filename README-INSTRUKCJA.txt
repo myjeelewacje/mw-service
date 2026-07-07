@@ -1,11 +1,14 @@
-AKTUALIZACJA LOGO MW SERVICE
+MW SERVICE — WERSJA JAK ZAAKCEPTOWANY PODGLĄD
 
-Zmiany:
-- nowe czarne logo w stylu wybranego przykładu
-- logo jest SVG, bez tła
-- w nagłówku jest czarne
-- w stopce na ciemnym tle automatycznie robi się białe przez CSS
-- cache CSS podbity na v6
+Zrobione:
+- ciemny hero jak w zaakceptowanym podglądzie
+- zdjęcie w tle jest ostre i widoczne, bez rozmycia
+- góra/header jest biała, ale przezroczysta
+- formularz jest ciemny/przezroczysty
+- zielone przyciski są mocniejsze
+- logo zostaje czarne, bez tła i bez podmian
+- cache wyłączony w nginx
+- CSS/logo podbite do v8
 
 CO ZROBIĆ:
 1. Wejdź do folderu repo mw-service.
@@ -15,7 +18,7 @@ CO ZROBIĆ:
 
 Musi być:
 mw-service/index.html
-mw-service/style-v4.css
+mw-service/style-v8.css
 mw-service/script-v4.js
 mw-service/Dockerfile
 mw-service/nginx.conf.template
@@ -23,11 +26,16 @@ mw-service/railway.toml
 mw-service/images/
 mw-service/projecten/
 
+Nie może być:
+package.json
+package-lock.json
+src/
+tsconfig.json
+nginx.conf
+
 GitHub Desktop:
 Summary:
-Update MW Service black logo
+Apply approved dark hero design
 
 Commit to main
 Push origin
-
-Po deployu odśwież stronę przez Ctrl+F5.

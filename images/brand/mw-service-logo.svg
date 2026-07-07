@@ -1,14 +1,11 @@
-<svg width="420" height="230" viewBox="0 0 420 230" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="MW Service">
+<svg width="520" height="150" viewBox="0 0 520 150" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="MW Service">
   <g fill="#000000">
-    <path d="M67 87 L210 16 L353 87 L338 96 L210 32 L82 96 Z"/>
-    <rect x="303" y="36" width="22" height="53"/>
-    <rect x="299" y="29" width="30" height="9"/>
-    <path d="M97 116 H120 L177 196 H153 L111 137 V196 H97 Z"/>
-    <path d="M177 116 H200 V196 H177 Z"/>
-    <path d="M225 116 H249 L282 170 L315 116 H326 L285 197 H272 L237 139 V196 H225 Z"/>
-    <path d="M326 116 H337 L296 197 H285 Z"/>
-    <rect x="87" y="214" width="48" height="4"/>
-    <rect x="285" y="214" width="48" height="4"/>
-    <text x="152" y="224" font-family="Arial, Helvetica, sans-serif" font-size="32" font-weight="400" letter-spacing="14">SERVICE</text>
+    <path d="M120 47 L260 16 L400 47 L392 57 L260 27 L128 57 Z"/>
+    <rect x="370" y="19" width="13" height="30"/>
+    <rect x="366" y="14" width="21" height="7"/>
+    <text x="162" y="100" font-family="Georgia, 'Times New Roman', serif" font-size="67" font-weight="400" letter-spacing="-6">MW</text>
+    <rect x="168" y="119" width="52" height="3"/>
+    <rect x="300" y="119" width="52" height="3"/>
+    <text x="227" y="128" font-family="Arial, Helvetica, sans-serif" font-size="23" font-weight="400" letter-spacing="11">SERVICE</text>
   </g>
 </svg>
