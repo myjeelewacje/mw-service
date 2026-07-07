@@ -1,8 +1,14 @@
-<svg width="360" height="110" viewBox="0 0 360 110" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="MW Service">
-  <rect x="2" y="2" width="356" height="106" rx="28" fill="white" fill-opacity="0.0"/>
-  <path d="M28 54L68 24L108 54" stroke="#365767" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/>
-  <path d="M45 55V36H58V46" stroke="#365767" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
-  <text x="124" y="54" fill="#365767" font-family="Arial, Helvetica, sans-serif" font-size="36" font-weight="900" letter-spacing="-1">MW</text>
-  <text x="190" y="54" fill="#8BCB33" font-family="Arial, Helvetica, sans-serif" font-size="36" font-weight="900" letter-spacing="-1">Service</text>
-  <text x="124" y="82" fill="#365767" font-family="Arial, Helvetica, sans-serif" font-size="14" font-weight="800" letter-spacing="4">DAK · GEVEL · SCHOORSTEEN</text>
+<svg width="420" height="230" viewBox="0 0 420 230" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="MW Service">
+  <g fill="#000000">
+    <path d="M67 87 L210 16 L353 87 L338 96 L210 32 L82 96 Z"/>
+    <rect x="303" y="36" width="22" height="53"/>
+    <rect x="299" y="29" width="30" height="9"/>
+    <path d="M97 116 H120 L177 196 H153 L111 137 V196 H97 Z"/>
+    <path d="M177 116 H200 V196 H177 Z"/>
+    <path d="M225 116 H249 L282 170 L315 116 H326 L285 197 H272 L237 139 V196 H225 Z"/>
+    <path d="M326 116 H337 L296 197 H285 Z"/>
+    <rect x="87" y="214" width="48" height="4"/>
+    <rect x="285" y="214" width="48" height="4"/>
+    <text x="152" y="224" font-family="Arial, Helvetica, sans-serif" font-size="32" font-weight="400" letter-spacing="14">SERVICE</text>
+  </g>
 </svg>

@@ -1,12 +1,11 @@
-TWARDA POPRAWKA — BEZ CACHE I BEZ OVERLAY
+AKTUALIZACJA LOGO MW SERVICE
 
-Co zmieniłem:
-- nowy plik CSS: style-v4.css?v=4, żeby przeglądarka nie trzymała starego stylu
-- nowy plik JS: script-v4.js?v=4
-- 4 boksy są w osobnej sekcji pod hero, nie mogą nachodzić na formularz
-- logo uproszczone i bardziej czytelne
-- dalej bez npm / Next / TypeScript
-- Railway działa przez Docker + nginx
+Zmiany:
+- nowe czarne logo w stylu wybranego przykładu
+- logo jest SVG, bez tła
+- w nagłówku jest czarne
+- w stopce na ciemnym tle automatycznie robi się białe przez CSS
+- cache CSS podbity na v6
 
 CO ZROBIĆ:
 1. Wejdź do folderu repo mw-service.
@@ -26,7 +25,7 @@ mw-service/projecten/
 
 GitHub Desktop:
 Summary:
-Hard fix layout cache and logo
+Update MW Service black logo
 
 Commit to main
 Push origin

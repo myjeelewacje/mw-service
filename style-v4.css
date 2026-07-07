@@ -9,8 +9,8 @@ img{max-width:100%;display:block}
 
 .floating-header-wrap{position:fixed;top:18px;left:0;right:0;z-index:50}
 .floating-header{height:74px;display:flex;align-items:center;justify-content:space-between;padding:10px 18px;border:1px solid rgba(255,255,255,.75);border-radius:999px;background:rgba(255,255,255,.86);backdrop-filter:blur(20px);box-shadow:0 20px 60px rgba(22,52,64,.13)}
-.brand{display:flex;align-items:center;flex:0 0 auto}
-.brand img{height:54px;width:auto;object-fit:contain}
+.brand{display:flex;align-items:center;flex:0 0 auto;min-width:150px}
+.brand img{height:58px;width:auto;object-fit:contain;display:block;background:transparent}
 .main-nav{display:flex;gap:20px;font-size:14px;color:var(--dark);font-weight:800}
 .header-right{display:flex;align-items:center;gap:10px}
 .phone-pill{display:inline-flex;align-items:center;justify-content:center;padding:12px 18px;border-radius:999px;background:#fff;color:var(--blue);font-weight:900;box-shadow:0 8px 24px rgba(33,63,77,.08)}
@@ -90,7 +90,7 @@ img{max-width:100%;display:block}
 .cta-actions{display:flex;flex-direction:column;gap:12px;min-width:240px}
 .site-footer{background:#17313c;color:#d8e8ed;padding:70px 0}
 .footer-grid{display:grid;grid-template-columns:1.2fr 1fr 1fr;gap:60px}
-.footer-logo{width:210px;background:#fff;border-radius:18px;padding:8px;margin-bottom:18px}
+.footer-logo{width:170px;background:transparent;border-radius:0;padding:0;margin-bottom:18px;filter:none}
 .footer-links{display:grid;gap:10px}
 .footer-links a,.footer-links span{color:#d8e8ed}
 .inner-page{background:#f7fbfb;min-height:100vh}
@@ -135,5 +135,7 @@ img{max-width:100%;display:block}
   .gallery-grid,.benefits-row{grid-template-columns:1fr}
   .floating-header-wrap{top:10px}
   .floating-header{height:68px}
-  .brand img{height:48px}
+  .brand img{height:58px;width:auto;object-fit:contain;display:block;background:transparent}
 }
+
+.site-footer .footer-logo{filter:brightness(0) invert(1)}
