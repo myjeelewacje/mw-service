@@ -1,82 +1,43 @@
 import Link from 'next/link'
+import { HeroSection } from '@/components/HeroSection'
 import { BeforeAfterSlider } from '@/components/BeforeAfterSlider'
-import { LeadForm } from '@/components/LeadForm'
-import { BENEFITS, COMPANY, PROCESS, SERVICES } from '@/data/site'
-import { REALIZATIONS } from '@/data/realizations'
-
-const heroSlides = [
-  '/images/portfolio/mycie-dachu-czyszczenie-malowanie-elewacji-dom-w-lesie-po.webp',
-  '/images/portfolio/mycie-elewacji-budynek-uslugowy-belgia-po.webp',
-  '/images/portfolio/budynek-firmowy-elewacja-po-myciu-chemicznym.webp',
-]
+import { BENEFITS, COMPANY, NAV_ITEMS, PROCESS, SERVICES } from '@/data/site'
+import { PROJECTS } from '@/data/projects'
 
 export default function HomePage() {
-  const mainProject = REALIZATIONS[0]
-
   return (
     <main>
-      <header className="site-header">
-        <Link href="/" className="logo">
-          <img src="/images/brand/mw-service-logo.svg" alt="MW Service" />
-        </Link>
-
-        <nav>
-          <Link href="/">Home</Link>
-          <Link href="#diensten">Diensten</Link>
-          <Link href="#voor-na">Voor & Na</Link>
-          <Link href="#realisaties">Realisaties</Link>
-          <Link href="#werkwijze">Werkwijze</Link>
-          <Link href="#contact">Contact</Link>
-        </nav>
-
-        <div className="header-actions">
-          <a href={`tel:${COMPANY.phone.replaceAll(' ', '')}`}>{COMPANY.phone}</a>
-          <Link className="button small" href="#offerte">
-            Gratis offerte
+      <header className="floating-header-wrap">
+        <div className="floating-header shell">
+          <Link href="/" className="brand" aria-label="MW Service home">
+            <img src="/images/brand/mw-service-logo.svg" alt="MW Service" />
           </Link>
+
+          <nav className="main-nav">
+            {NAV_ITEMS.map((item) => (
+              <Link key={item.href} href={item.href}>
+                {item.label}
+              </Link>
+            ))}
+          </nav>
+
+          <div className="header-right">
+            <a className="phone-pill" href={`tel:${COMPANY.phone.replaceAll(' ', '')}`}>
+              {COMPANY.phone}
+            </a>
+            <Link className="button header-button" href="#offerte">
+              Offerte aanvragen
+            </Link>
+          </div>
         </div>
       </header>
 
-      <section className="hero">
-        <div className="hero-bg">
-          <img src={heroSlides[0]} alt="Professionele reiniging door MW Service" />
-        </div>
+      <HeroSection />
 
-        <div className="hero-overlay" />
-
-        <div className="hero-content">
-          <div className="hero-copy">
-            <span className="eyebrow">Professionele reiniging</span>
-            <h1>Dakreiniging, schoorsteenreiniging en gevelreiniging</h1>
-            <p>
-              Wij reinigen daken, schoorstenen en gevels met aandacht voor
-              veiligheid, materiaal en een duurzaam resultaat.
-            </p>
-
-            <div className="hero-buttons">
-              <Link className="button" href="#offerte">
-                Gratis offerte
-              </Link>
-              <Link className="button ghost" href="#realisaties">
-                Bekijk realisaties →
-              </Link>
-            </div>
-
-            <div className="slider-dots" aria-label="Hero slider voorbeeld">
-              {heroSlides.map((slide, index) => (
-                <span key={slide} className={index === 0 ? 'active' : ''} />
-              ))}
-            </div>
-          </div>
-
-          <LeadForm />
-        </div>
-      </section>
-
-      <section className="benefits">
+      <section className="benefits-row shell">
         {BENEFITS.map((item) => (
-          <article key={item.title}>
-            <div className="benefit-icon">✓</div>
+          <article key={item.title} className="benefit-card">
+            <div className="benefit-mark">✓</div>
             <div>
               <h3>{item.title}</h3>
               <p>{item.text}</p>
@@ -85,112 +46,179 @@ export default function HomePage() {
         ))}
       </section>
 
-      <section id="diensten" className="section">
-        <div className="section-title centered">
+      <section id="diensten" className="section shell">
+        <div className="section-heading center">
           <span className="eyebrow">Onze diensten</span>
-          <h2>Waarmee kunnen wij u helpen?</h2>
+          <h2>Specialisten in een schoon en verzorgd exterieur</h2>
           <p>
-            Drie duidelijke diensten, met een veilige aanpak en een nette
-            afwerking.
+            Dakreiniging, gevelreiniging en schoorsteenreiniging met een professionele,
+            rustige en fasegewijze aanpak.
           </p>
         </div>
 
-        <div className="cards three">
+        <div className="service-grid">
           {SERVICES.map((service) => (
-            <article className="service-card" key={service.title}>
+            <article key={service.title} className="service-card">
               <img src={service.image} alt={service.title} />
-              <div>
-                <span className="round-icon">⌂</span>
+              <div className="service-content">
+                <span className="service-tag">{service.accent}</span>
                 <h3>{service.title}</h3>
                 <p>{service.description}</p>
-                <Link href="#offerte">Meer info →</Link>
+                <Link href="#offerte">Meer informatie →</Link>
               </div>
             </article>
           ))}
         </div>
       </section>
 
-      <section id="voor-na" className="section before-section">
-        <div className="section-title centered">
-          <span className="eyebrow">Voor & Na</span>
-          <h2>Bekijk het verschil voor en na</h2>
-        </div>
+      <section id="voor-na" className="section compare-section">
+        <div className="shell">
+          <div className="section-heading between">
+            <div>
+              <span className="eyebrow">Voor & na</span>
+              <h2>Het verschil ziet u meteen</h2>
+            </div>
+            <p>
+              Echte voor- en naresultaten van projecten die wij uitvoerden. Geen bewerking,
+              maar zichtbare verbetering.
+            </p>
+          </div>
 
-        <BeforeAfterSlider
-          before={mainProject.before}
-          after={mainProject.after}
-          title={mainProject.shortTitle}
-          alt="Woning in het bos voor en na de reiniging"
-        />
+          <div className="compare-grid">
+            <article className="compare-card wide">
+              <BeforeAfterSlider
+                before={PROJECTS[0].before}
+                after={PROJECTS[0].after}
+                title={PROJECTS[0].shortTitle}
+                alt="Voor en na van het huis in het bos"
+              />
+              <div className="compare-copy">
+                <h3>Dakreiniging & gevelrenovatie</h3>
+                <p>Volledige uitvoering in fases, inclusief schilderwerk met siliconenverf.</p>
+              </div>
+            </article>
+
+            <article className="compare-card">
+              <BeforeAfterSlider
+                before={PROJECTS[1].before}
+                after={PROJECTS[1].after}
+                title={PROJECTS[1].shortTitle}
+                alt="Voor en na van een bedrijfsgebouw in glad beton"
+              />
+              <div className="compare-copy">
+                <h3>Gevelreiniging bedrijfsgebouw</h3>
+                <p>Complexe chemische reiniging, veilig en fasegewijs uitgevoerd.</p>
+              </div>
+            </article>
+
+            <article className="compare-card">
+              <BeforeAfterSlider
+                before={PROJECTS[2].before}
+                after={PROJECTS[2].after}
+                title={PROJECTS[2].shortTitle}
+                alt="Voor en na van de gevel van een zorginstelling"
+              />
+              <div className="compare-copy">
+                <h3>Gevelreiniging zorginstelling</h3>
+                <p>Voorzichtig gereinigd met aangepaste behandeling voor gevoelige gevels.</p>
+              </div>
+            </article>
+          </div>
+        </div>
       </section>
 
-      <section id="realisaties" className="section">
-        <div className="section-title">
+      <section id="projecten" className="section shell">
+        <div className="section-heading between">
           <div>
-            <span className="eyebrow">Realisaties</span>
-            <h2>Projecten waar we trots op zijn</h2>
+            <span className="eyebrow">Projecten</span>
+            <h2>Recente realisaties</h2>
           </div>
-          <p>
-            Echte projecten met echte foto’s. Geen bewerkte resultaten, maar
-            duidelijke voorbeelden van ons werk.
-          </p>
+          <Link href="/projecten" className="text-link">
+            Bekijk alle projecten →
+          </Link>
         </div>
 
-        <div className="cards three">
-          {REALIZATIONS.map((project) => (
-            <article className="project-card" key={project.slug}>
+        <div className="project-grid">
+          {PROJECTS.map((project) => (
+            <article key={project.slug} className="project-card">
               <img src={project.cardImage} alt={project.title} />
-              <div>
+              <div className="project-copy">
                 <span>{project.service}</span>
                 <h3>{project.shortTitle}</h3>
                 <p>{project.excerpt}</p>
-                <Link href={`/realisaties/${project.slug}`}>Bekijk project →</Link>
+                <Link href={`/projecten/${project.slug}`}>Bekijk project →</Link>
               </div>
             </article>
           ))}
         </div>
       </section>
 
-      <section id="werkwijze" className="section process-section">
-        <div className="section-title centered">
-          <span className="eyebrow">Werkwijze</span>
-          <h2>Zo pakken wij uw project aan</h2>
-        </div>
+      <section id="werkwijze" className="section tinted-section">
+        <div className="shell">
+          <div className="section-heading center">
+            <span className="eyebrow">Werkwijze</span>
+            <h2>Zo werken wij</h2>
+            <p>Een duidelijke aanpak, stap voor stap en afgestemd op uw woning of gebouw.</p>
+          </div>
 
-        <div className="process-grid">
-          {PROCESS.map((step) => (
-            <article key={step.step}>
-              <strong>{step.step}</strong>
-              <h3>{step.title}</h3>
-              <p>{step.text}</p>
-            </article>
-          ))}
+          <div className="process-grid">
+            {PROCESS.map((step) => (
+              <article key={step.step} className="process-card">
+                <span>{step.step}</span>
+                <h3>{step.title}</h3>
+                <p>{step.text}</p>
+              </article>
+            ))}
+          </div>
         </div>
       </section>
 
-      <section id="contact" className="cta">
+      <section id="contact" className="section shell cta-block">
         <div>
-          <span className="eyebrow">Gratis offerte</span>
-          <h2>Klaar voor een schone en beschermde woning of gebouw?</h2>
+          <span className="eyebrow">Contact</span>
+          <h2>Klaar voor een schone woning, gevel of schoorsteen?</h2>
           <p>
-            Neem contact op en ontvang een vrijblijvende offerte op maat.
+            Stuur ons uw vraag en ontvang snel een vrijblijvende offerte. Wij denken mee en
+            geven eerlijk advies op basis van de situatie.
           </p>
         </div>
-
-        <Link className="button" href="#offerte">
-          Gratis offerte aanvragen →
-        </Link>
+        <div className="cta-actions">
+          <a className="phone-pill large" href={`tel:${COMPANY.phone.replaceAll(' ', '')}`}>
+            {COMPANY.phone}
+          </a>
+          <a className="button primary" href={`mailto:${COMPANY.email}`}>
+            Mail ons
+          </a>
+        </div>
       </section>
 
-      <footer>
-        <img src="/images/brand/mw-service-logo.svg" alt="MW Service" />
-        <p>
-          MW Service helpt met dakreiniging, schoorsteenreiniging en
-          gevelreiniging.
-        </p>
-        <div>
-          <a href={`tel:${COMPANY.phone.replaceAll(' ', '')}`}>{COMPANY.phone}</a>
-          <a href={`mailto:${COMPANY.email}`}>{COMPANY.email}</a>
+      <footer className="site-footer">
+        <div className="shell footer-grid">
+          <div>
+            <img className="footer-logo" src="/images/brand/mw-service-logo.svg" alt="MW Service" />
+            <p>
+              MW Service is uw specialist in dakreiniging, gevelreiniging en
+              schoorsteenreiniging.
+            </p>
+          </div>
+          <div>
+            <h4>Snelle links</h4>
+            <div className="footer-links">
+              {NAV_ITEMS.map((item) => (
+                <Link key={item.href} href={item.href}>
+                  {item.label}
+                </Link>
+              ))}
+            </div>
+          </div>
+          <div>
+            <h4>Contact</h4>
+            <div className="footer-links">
+              <a href={`tel:${COMPANY.phone.replaceAll(' ', '')}`}>{COMPANY.phone}</a>
+              <a href={`mailto:${COMPANY.email}`}>{COMPANY.email}</a>
+              <span>{COMPANY.location}</span>
+            </div>
+          </div>
         </div>
       </footer>
     </main>

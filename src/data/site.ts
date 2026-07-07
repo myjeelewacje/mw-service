@@ -2,65 +2,75 @@ export const COMPANY = {
   name: 'MW Service',
   phone: '06 12 34 56 78',
   email: 'info@mwservice.be',
+  location: 'België',
 }
+
+export const NAV_ITEMS = [
+  { label: 'Home', href: '/' },
+  { label: 'Diensten', href: '#diensten' },
+  { label: 'Voor & na', href: '#voor-na' },
+  { label: 'Projecten', href: '#projecten' },
+  { label: 'Werkwijze', href: '#werkwijze' },
+  { label: 'Contact', href: '#contact' },
+]
 
 export const SERVICES = [
   {
     title: 'Dakreiniging',
-    slug: 'dakreiniging',
+    description:
+      'Verwijderen van mos, algen en aanslag met een veilige aanpak en oog voor de levensduur van uw dak.',
     image: '/images/portfolio/mycie-dachu-czyszczenie-malowanie-elewacji-dom-w-lesie-po.webp',
-    description:
-      'Wij verwijderen mos, algen en vuil van uw dak. Voor een langere levensduur en een nette uitstraling.',
-  },
-  {
-    title: 'Schoorsteenreiniging',
-    slug: 'schoorsteenreiniging',
-    image: '/images/hero/schoorsteenreiniging.svg',
-    description:
-      'Veilige en grondige reiniging van uw schoorsteen voor een betere trek en een gecontroleerde werking.',
+    accent: 'Hoofddienst',
   },
   {
     title: 'Gevelreiniging',
-    slug: 'gevelreiniging',
-    image: '/images/portfolio/budynek-firmowy-elewacja-po-myciu-chemicznym.webp',
     description:
-      'Effectieve reiniging van gevels, muren en buitenoppervlakken voor een frisse en verzorgde look.',
+      'Reiniging van gevels, muren en buitenvlakken voor een frisse uitstraling en een verzorgd totaalbeeld.',
+    image: '/images/portfolio/budynek-firmowy-elewacja-po-myciu-chemicznym.webp',
+    accent: 'Zorgvuldig',
+  },
+  {
+    title: 'Schoorsteenreiniging',
+    description:
+      'Reiniging van schoorstenen voor een nette uitstraling, minder vervuiling en een veilige afwerking rondom de woning.',
+    image: '/images/portfolio/dom-w-lesie-po-malowaniu-elewacji-farba-silikonowa-bok.webp',
+    accent: 'Aanvullende dienst',
   },
 ]
 
 export const BENEFITS = [
   {
-    title: 'Snelle reactie',
-    text: 'Wij reageren snel en staan klaar wanneer u ons nodig heeft.',
+    title: 'Echte projectfoto’s',
+    text: 'Wij tonen uitsluitend echte beelden van uitgevoerde werken.',
   },
   {
-    title: 'Veilige werkwijze',
-    text: 'Wij werken veilig en beschermen uw woning of gebouw.',
+    title: 'Veilig & netjes',
+    text: 'Elke opdracht wordt zorgvuldig voorbereid en proper afgewerkt.',
   },
   {
-    title: 'Duurzaam resultaat',
-    text: 'Langdurig schoon en verzorgd resultaat waar u op kunt rekenen.',
+    title: 'Duurzame bescherming',
+    text: 'Wij werken met technieken en producten die het oppervlak respecteren.',
   },
   {
-    title: 'Transparante offerte',
-    text: 'Duidelijke prijsopgave zonder verrassingen achteraf.',
+    title: 'Snelle offerte',
+    text: 'U ontvangt snel een duidelijke en vrijblijvende prijsinschatting.',
   },
 ]
 
 export const PROCESS = [
   {
     step: '01',
-    title: 'Contact & advies',
-    text: 'U stuurt foto’s of omschrijft de situatie. Wij geven eerlijk advies.',
+    title: 'Analyse van de situatie',
+    text: 'We bekijken de vervuiling, de ondergrond en de gewenste afwerking.',
   },
   {
     step: '02',
-    title: 'Offerte op maat',
-    text: 'U ontvangt een duidelijke en vrijblijvende prijsopgave.',
+    title: 'Fasegewijze uitvoering',
+    text: 'We plannen de werken logisch en veilig, met aandacht voor omgeving en detail.',
   },
   {
     step: '03',
-    title: 'Professionele uitvoering',
-    text: 'Wij voeren de werken netjes, veilig en stap voor stap uit.',
+    title: 'Oplevering & advies',
+    text: 'Na afloop leveren we netjes op en geven we advies voor langdurig behoud.',
   },
 ]

@@ -1,0 +1,142 @@
+export type Project = {
+  slug: string
+  title: string
+  shortTitle: string
+  service: string
+  excerpt: string
+  location: string
+  heroImage: string
+  before: string
+  after: string
+  cardImage: string
+  gallery: string[]
+  intro: string
+  phases: { title: string; text: string }[]
+  seoDescription: string
+}
+
+export const PROJECTS: Project[] = [
+  {
+    slug: 'huis-in-het-bos',
+    title: 'Volledig traject voor een huis in het bos',
+    shortTitle: 'Huis in het bos',
+    service: 'Dakreiniging, gevelreiniging en schilderwerk',
+    excerpt:
+      'Een totaalproject in verschillende fases: reiniging van het dak, reiniging van oude en nieuwe gevelvlakken en afwerking met siliconenverf.',
+    location: 'Particuliere woning',
+    heroImage: '/images/portfolio/mycie-dachu-czyszczenie-malowanie-elewacji-dom-w-lesie-po.webp',
+    before: '/images/portfolio/mycie-dachu-czyszczenie-elewacji-dom-w-lesie-przed.webp',
+    after: '/images/portfolio/mycie-dachu-czyszczenie-malowanie-elewacji-dom-w-lesie-po.webp',
+    cardImage: '/images/portfolio/mycie-dachu-czyszczenie-malowanie-elewacji-dom-w-lesie-po.webp',
+    gallery: [
+      '/images/portfolio/mycie-dachu-czyszczenie-elewacji-dom-w-lesie-przed.webp',
+      '/images/portfolio/dom-w-lesie-przed-myciem-dachu-i-elewacji-bok.webp',
+      '/images/portfolio/prace-etapowe-mycie-dachu-elewacji-dom-w-lesie.webp',
+      '/images/portfolio/mycie-dachu-czyszczenie-malowanie-elewacji-dom-w-lesie-po.webp',
+      '/images/portfolio/dom-w-lesie-po-malowaniu-elewacji-farba-silikonowa-bok.webp',
+      '/images/portfolio/dom-w-lesie-po-kompleksowej-renowacji-elewacji.webp',
+    ],
+    intro:
+      'Voor deze klant voerden we een volledig traject uit rondom de woning. De wens was om het volledige buitenschil-project via één partner te laten verlopen: van dakreiniging tot gevelreiniging en het schilderen van de gevel met een duurzame siliconenverf.',
+    phases: [
+      {
+        title: 'Fase 1 — Dakreiniging',
+        text: 'Eerst werd het dak grondig gereinigd om vervuiling, aanslag en organische afzettingen veilig te verwijderen.',
+      },
+      {
+        title: 'Fase 2 — Reiniging van oude en nieuwe gevelvlakken',
+        text: 'Daarna reinigden we zowel de bestaande gevel als de nieuwe geveldelen na de uitbreiding, zodat alles weer één geheel vormde.',
+      },
+      {
+        title: 'Fase 3 — Schilderen met siliconenverf',
+        text: 'Als afwerking brachten we een siliconenverf aan voor een duurzame bescherming en een frisse, egale uitstraling voor jaren.',
+      },
+    ],
+    seoDescription:
+      'Dakreiniging, gevelreiniging en schilderwerk bij een huis in het bos. Fasegewijs uitgevoerd met duurzame afwerking en echte projectfoto’s.',
+  },
+  {
+    slug: 'kantoorgebouw-glad-beton',
+    title: 'Chemische reiniging van glad beton bij een bedrijfsgebouw',
+    shortTitle: 'Bedrijfsgebouw in glad beton',
+    service: 'Gevelreiniging',
+    excerpt:
+      'Complexe chemische reiniging van gladde betonvlakken aan een bedrijfsgebouw, uitgevoerd in fases en met aandacht voor de omgeving.',
+    location: 'Bedrijfsgebouw',
+    heroImage: '/images/portfolio/budynek-firmowy-elewacja-po-myciu-chemicznym.webp',
+    before: '/images/portfolio/mycie-betonu-gladkiego-budynek-firmowy-przed.webp',
+    after: '/images/portfolio/mycie-betonu-gladkiego-budynek-firmowy-po.webp',
+    cardImage: '/images/portfolio/odswiezona-elewacja-budynku-firmowego-po-czyszczeniu.webp',
+    gallery: [
+      '/images/portfolio/mycie-betonu-gladkiego-budynek-firmowy-przed.webp',
+      '/images/portfolio/zabrudzenia-na-elewacji-betonowej-przed-myciem.webp',
+      '/images/portfolio/budynek-biurowy-elewacja-betonowa-przed-myciem-bok.webp',
+      '/images/portfolio/mycie-elewacji-betonowej-budynek-firmowy-etapowo.webp',
+      '/images/portfolio/mycie-betonu-gladkiego-budynek-firmowy-po.webp',
+      '/images/portfolio/budynek-firmowy-elewacja-po-myciu-chemicznym.webp',
+      '/images/portfolio/odswiezona-elewacja-budynku-firmowego-po-czyszczeniu.webp',
+    ],
+    intro:
+      'Dit project draaide om het reinigen van glad beton aan een bedrijfsgebouw. De werken vonden plaats op een locatie met aanwezigheid van personeel en verkeer, waardoor planning en veiligheid extra belangrijk waren.',
+    phases: [
+      {
+        title: 'Fase 1 — Voorbereiding en test',
+        text: 'We bepaalden de geschikte chemische aanpak en testten het proces op het materiaal om het gewenste resultaat veilig te behalen.',
+      },
+      {
+        title: 'Fase 2 — Ring per ring reinigen',
+        text: 'Het gebouw werd stapsgewijs gereinigd, ring per ring, zodat de controle over het proces en de werfveiligheid behouden bleef.',
+      },
+      {
+        title: 'Fase 3 — Afwerking in het weekend',
+        text: 'De laatste fase werd in het weekend afgerond om de omgeving extra te beveiligen en hinder in de drukke zone te beperken.',
+      },
+    ],
+    seoDescription:
+      'Mycie betonu gladkiego en chemische gevelreiniging van een bedrijfsgebouw. Uitvoering in fases en veilig gepland in een drukke omgeving.',
+  },
+  {
+    slug: 'zorginstelling-gevelreiniging',
+    title: 'Gevelreiniging van een zorginstelling',
+    shortTitle: 'Zorginstelling',
+    service: 'Gevelreiniging',
+    excerpt:
+      'Voorzichtige reiniging van een gevoelige gevel met zichtbare vervuiling en strepen, uitgevoerd met aangepaste chemische middelen.',
+    location: 'Zorginstelling',
+    heroImage: '/images/portfolio/elewacja-placowki-opiekunczej-po-myciu-chemicznym.webp',
+    before: '/images/portfolio/mycie-chemiczne-elewacji-placowka-opiekuncza-przed.webp',
+    after: '/images/portfolio/mycie-chemiczne-elewacji-placowka-opiekuncza-po.webp',
+    cardImage: '/images/portfolio/elewacja-placowki-opiekunczej-po-myciu-chemicznym.webp',
+    gallery: [
+      '/images/portfolio/mycie-chemiczne-elewacji-placowka-opiekuncza-przed.webp',
+      '/images/portfolio/zabrudzona-elewacja-placowka-opiekuncza-przed-myciem-1.webp',
+      '/images/portfolio/zacieki-na-elewacji-przed-myciem-chemicznym.webp',
+      '/images/portfolio/mycie-chemiczne-elewacji-placowka-opiekuncza-w-trakcie.webp',
+      '/images/portfolio/mycie-chemiczne-elewacji-placowka-opiekuncza-po.webp',
+      '/images/portfolio/elewacja-placowki-opiekunczej-po-myciu-chemicznym.webp',
+      '/images/portfolio/odswiezona-elewacja-obiekt-opiekunczy-po-czyszczeniu.webp',
+    ],
+    intro:
+      'De gevel van deze zorginstelling vertoonde zichtbare vervuiling en donkere strepen. De opdracht vroeg om een zorgvuldige aanpak die veilig is voor de ondergrond en tegelijk een duidelijk zichtbaar resultaat oplevert.',
+    phases: [
+      {
+        title: 'Fase 1 — Inspectie van de gevel',
+        text: 'We brachten de vervuiling en de gevoeligheid van het geveltype in kaart om de juiste reinigingsmethode te kiezen.',
+      },
+      {
+        title: 'Fase 2 — Chemische reiniging',
+        text: 'Met een aangepaste chemische behandeling konden we de aanslag veilig loswerken en het oppervlak opfrissen.',
+      },
+      {
+        title: 'Fase 3 — Controle en oplevering',
+        text: 'Na de reiniging werd het resultaat gecontroleerd en netjes opgeleverd met een uniforme en verzorgde uitstraling.',
+      },
+    ],
+    seoDescription:
+      'Gevelreiniging van een zorginstelling met een zorgvuldige chemische behandeling. Echte voor- en nafoto’s van de uitvoering.',
+  },
+]
+
+export function getProject(slug: string) {
+  return PROJECTS.find((project) => project.slug === slug)
+}

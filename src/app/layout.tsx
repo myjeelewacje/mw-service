@@ -1,17 +1,14 @@
-import type { Metadata } from 'next'
 import './globals.css'
+import type { Metadata } from 'next'
+import { COMPANY } from '@/data/site'
 
 export const metadata: Metadata = {
-  title: 'MW Service | Dakreiniging, schoorsteenreiniging en gevelreiniging',
+  title: `${COMPANY.name} | Dakreiniging, gevelreiniging en schoorsteenreiniging`,
   description:
-    'MW Service helpt met dakreiniging, schoorsteenreiniging en gevelreiniging. Vraag gratis en vrijblijvend een offerte aan.',
+    'MW Service helpt met dakreiniging, gevelreiniging en schoorsteenreiniging. Echte projecten, duidelijke communicatie en duurzame resultaten.',
 }
 
-export default function RootLayout({
-  children,
-}: Readonly<{
-  children: React.ReactNode
-}>) {
+export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="nl">
       <body>{children}</body>

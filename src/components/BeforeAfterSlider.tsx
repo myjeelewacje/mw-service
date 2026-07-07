@@ -6,39 +6,35 @@ type Props = {
   before: string
   after: string
   title: string
-  alt: string
+  alt?: string
 }
 
 export function BeforeAfterSlider({ before, after, title, alt }: Props) {
   const [position, setPosition] = useState(50)
 
   return (
-    <div className="before-after">
-      <div className="ba-header">
-        <span>Voor & Na</span>
-        <strong>{title}</strong>
-      </div>
+    <div className="ba" aria-label={`${title} - vergelijking voor en na`}>
+      <div className="ba-frame">
+        <img src={after} alt={alt || `${title} na de werken`} className="ba-after-img" />
 
-      <div className="ba-stage" aria-label={alt}>
-        <img src={after} alt={`${alt} na`} className="ba-img" />
-        <div className="ba-before" style={{ width: `${position}%` }}>
-          <img src={before} alt={`${alt} voor`} className="ba-img" />
+        <div className="ba-before-layer" style={{ width: `${position}%` }}>
+          <img src={before} alt={alt || `${title} voor de werken`} className="ba-before-img" />
         </div>
 
         <div className="ba-line" style={{ left: `${position}%` }}>
           <span>↔</span>
         </div>
 
-        <span className="ba-label ba-label-left">Voor</span>
-        <span className="ba-label ba-label-right">Na</span>
+        <span className="ba-label ba-left">Voor</span>
+        <span className="ba-label ba-right">Na</span>
 
         <input
-          className="ba-range"
+          className="ba-input"
           type="range"
           min="0"
           max="100"
           value={position}
-          aria-label="Vergelijk voor en na"
+          aria-label={`Vergelijking voor en na voor ${title}`}
           onChange={(event) => setPosition(Number(event.target.value))}
         />
       </div>
