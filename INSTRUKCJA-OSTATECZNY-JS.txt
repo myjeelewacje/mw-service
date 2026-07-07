@@ -1,0 +1,31 @@
+OSTATECZNA WERSJA JAVASCRIPT — BEZ TYPESCRIPT
+
+Ta paczka usuwa problem z Railway:
+- nie ma tsconfig.json
+- nie ma plików .ts ani .tsx
+- są tylko .js i .jsx
+- Railway nie powinien już pytać o TypeScript ani @types
+
+CO ZROBIĆ:
+1. Wejdź do folderu repo mw-service.
+2. Usuń wszystko ze środka, ale NIE usuwaj ukrytego folderu .git.
+3. Rozpakuj ten ZIP.
+4. Wklej zawartość ZIP-a bezpośrednio do folderu mw-service.
+
+Musi być:
+mw-service/src/app/page.jsx
+mw-service/src/components/HeroSection.jsx
+mw-service/src/data/site.js
+mw-service/src/data/projects.js
+mw-service/package.json
+mw-service/railway.toml
+
+Nie może być:
+mw-service/MW-SERVICE-JS-OSTATECZNY/src/...
+
+GitHub Desktop:
+Summary:
+Replace MW Service with JavaScript build
+
+Commit to main
+Push origin

@@ -2,14 +2,7 @@
 
 import { useState } from 'react'
 
-type Props = {
-  before: string
-  after: string
-  title: string
-  alt?: string
-}
-
-export function BeforeAfterSlider({ before, after, title, alt }: Props) {
+export function BeforeAfterSlider({ before, after, title, alt }) {
   const [position, setPosition] = useState(50)
 
   return (

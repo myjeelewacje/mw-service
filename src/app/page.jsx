@@ -15,19 +15,13 @@ export default function HomePage() {
 
           <nav className="main-nav">
             {NAV_ITEMS.map((item) => (
-              <Link key={item.href} href={item.href}>
-                {item.label}
-              </Link>
+              <Link key={item.href} href={item.href}>{item.label}</Link>
             ))}
           </nav>
 
           <div className="header-right">
-            <a className="phone-pill" href={`tel:${COMPANY.phone.replaceAll(' ', '')}`}>
-              {COMPANY.phone}
-            </a>
-            <Link className="button header-button" href="#offerte">
-              Offerte aanvragen
-            </Link>
+            <a className="phone-pill" href={`tel:${COMPANY.phone.replaceAll(' ', '')}`}>{COMPANY.phone}</a>
+            <Link className="button header-button" href="#offerte">Offerte aanvragen</Link>
           </div>
         </div>
       </header>
@@ -50,10 +44,7 @@ export default function HomePage() {
         <div className="section-heading center">
           <span className="eyebrow">Onze diensten</span>
           <h2>Specialisten in een schoon en verzorgd exterieur</h2>
-          <p>
-            Dakreiniging, gevelreiniging en schoorsteenreiniging met een professionele,
-            rustige en fasegewijze aanpak.
-          </p>
+          <p>Dakreiniging, gevelreiniging en schoorsteenreiniging met een professionele, rustige en fasegewijze aanpak.</p>
         </div>
 
         <div className="service-grid">
@@ -78,20 +69,12 @@ export default function HomePage() {
               <span className="eyebrow">Voor & na</span>
               <h2>Het verschil ziet u meteen</h2>
             </div>
-            <p>
-              Echte voor- en naresultaten van projecten die wij uitvoerden. Geen bewerking,
-              maar zichtbare verbetering.
-            </p>
+            <p>Echte voor- en naresultaten van projecten die wij uitvoerden. Geen bewerking, maar zichtbare verbetering.</p>
           </div>
 
           <div className="compare-grid">
             <article className="compare-card wide">
-              <BeforeAfterSlider
-                before={PROJECTS[0].before}
-                after={PROJECTS[0].after}
-                title={PROJECTS[0].shortTitle}
-                alt="Voor en na van het huis in het bos"
-              />
+              <BeforeAfterSlider before={PROJECTS[0].before} after={PROJECTS[0].after} title={PROJECTS[0].shortTitle} alt="Voor en na van het huis in het bos" />
               <div className="compare-copy">
                 <h3>Dakreiniging & gevelrenovatie</h3>
                 <p>Volledige uitvoering in fases, inclusief schilderwerk met siliconenverf.</p>
@@ -99,12 +82,7 @@ export default function HomePage() {
             </article>
 
             <article className="compare-card">
-              <BeforeAfterSlider
-                before={PROJECTS[1].before}
-                after={PROJECTS[1].after}
-                title={PROJECTS[1].shortTitle}
-                alt="Voor en na van een bedrijfsgebouw in glad beton"
-              />
+              <BeforeAfterSlider before={PROJECTS[1].before} after={PROJECTS[1].after} title={PROJECTS[1].shortTitle} alt="Voor en na van een bedrijfsgebouw in glad beton" />
               <div className="compare-copy">
                 <h3>Gevelreiniging bedrijfsgebouw</h3>
                 <p>Complexe chemische reiniging, veilig en fasegewijs uitgevoerd.</p>
@@ -112,12 +90,7 @@ export default function HomePage() {
             </article>
 
             <article className="compare-card">
-              <BeforeAfterSlider
-                before={PROJECTS[2].before}
-                after={PROJECTS[2].after}
-                title={PROJECTS[2].shortTitle}
-                alt="Voor en na van de gevel van een zorginstelling"
-              />
+              <BeforeAfterSlider before={PROJECTS[2].before} after={PROJECTS[2].after} title={PROJECTS[2].shortTitle} alt="Voor en na van de gevel van een zorginstelling" />
               <div className="compare-copy">
                 <h3>Gevelreiniging zorginstelling</h3>
                 <p>Voorzichtig gereinigd met aangepaste behandeling voor gevoelige gevels.</p>
@@ -133,9 +106,7 @@ export default function HomePage() {
             <span className="eyebrow">Projecten</span>
             <h2>Recente realisaties</h2>
           </div>
-          <Link href="/projecten" className="text-link">
-            Bekijk alle projecten →
-          </Link>
+          <Link href="/projecten" className="text-link">Bekijk alle projecten →</Link>
         </div>
 
         <div className="project-grid">
@@ -177,18 +148,11 @@ export default function HomePage() {
         <div>
           <span className="eyebrow">Contact</span>
           <h2>Klaar voor een schone woning, gevel of schoorsteen?</h2>
-          <p>
-            Stuur ons uw vraag en ontvang snel een vrijblijvende offerte. Wij denken mee en
-            geven eerlijk advies op basis van de situatie.
-          </p>
+          <p>Stuur ons uw vraag en ontvang snel een vrijblijvende offerte. Wij denken mee en geven eerlijk advies op basis van de situatie.</p>
         </div>
         <div className="cta-actions">
-          <a className="phone-pill large" href={`tel:${COMPANY.phone.replaceAll(' ', '')}`}>
-            {COMPANY.phone}
-          </a>
-          <a className="button primary" href={`mailto:${COMPANY.email}`}>
-            Mail ons
-          </a>
+          <a className="phone-pill large" href={`tel:${COMPANY.phone.replaceAll(' ', '')}`}>{COMPANY.phone}</a>
+          <a className="button primary" href={`mailto:${COMPANY.email}`}>Mail ons</a>
         </div>
       </section>
 
@@ -196,18 +160,13 @@ export default function HomePage() {
         <div className="shell footer-grid">
           <div>
             <img className="footer-logo" src="/images/brand/mw-service-logo.svg" alt="MW Service" />
-            <p>
-              MW Service is uw specialist in dakreiniging, gevelreiniging en
-              schoorsteenreiniging.
-            </p>
+            <p>MW Service is uw specialist in dakreiniging, gevelreiniging en schoorsteenreiniging.</p>
           </div>
           <div>
             <h4>Snelle links</h4>
             <div className="footer-links">
               {NAV_ITEMS.map((item) => (
-                <Link key={item.href} href={item.href}>
-                  {item.label}
-                </Link>
+                <Link key={item.href} href={item.href}>{item.label}</Link>
               ))}
             </div>
           </div>

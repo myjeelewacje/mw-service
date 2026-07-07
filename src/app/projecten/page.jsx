@@ -5,9 +5,7 @@ export default function ProjectenPage() {
   return (
     <main className="inner-page">
       <section className="page-hero small shell">
-        <Link href="/" className="back-link">
-          ← Terug naar home
-        </Link>
+        <Link href="/" className="back-link">← Terug naar home</Link>
         <span className="eyebrow">Projecten</span>
         <h1>Alle realisaties</h1>
         <p>Echte projectfoto’s en heldere omschrijvingen van uitgevoerde werken.</p>

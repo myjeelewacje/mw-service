@@ -7,7 +7,7 @@ export function generateStaticParams() {
   return PROJECTS.map((project) => ({ slug: project.slug }))
 }
 
-export default function ProjectDetailPage({ params }: { params: { slug: string } }) {
+export default function ProjectDetailPage({ params }) {
   const project = getProject(params.slug)
 
   if (!project) {
@@ -20,9 +20,7 @@ export default function ProjectDetailPage({ params }: { params: { slug: string }
         <img src={project.heroImage} alt={project.title} className="detail-hero-image" />
         <div className="detail-overlay" />
         <div className="detail-content shell">
-          <Link href="/projecten" className="back-link light">
-            ← Terug naar projecten
-          </Link>
+          <Link href="/projecten" className="back-link light">← Terug naar projecten</Link>
           <span className="eyebrow light">{project.service}</span>
           <h1>{project.title}</h1>
           <p>{project.seoDescription}</p>
@@ -50,22 +48,10 @@ export default function ProjectDetailPage({ params }: { params: { slug: string }
         <aside className="detail-summary">
           <h3>Projectgegevens</h3>
           <ul>
-            <li>
-              <strong>Dienst</strong>
-              <span>{project.service}</span>
-            </li>
-            <li>
-              <strong>Type</strong>
-              <span>{project.location}</span>
-            </li>
-            <li>
-              <strong>Aanpak</strong>
-              <span>Fasegewijs en zorgvuldig uitgevoerd</span>
-            </li>
-            <li>
-              <strong>Foto’s</strong>
-              <span>Echte projectfoto’s</span>
-            </li>
+            <li><strong>Dienst</strong><span>{project.service}</span></li>
+            <li><strong>Type</strong><span>{project.location}</span></li>
+            <li><strong>Aanpak</strong><span>Fasegewijs en zorgvuldig uitgevoerd</span></li>
+            <li><strong>Foto’s</strong><span>Echte projectfoto’s</span></li>
           </ul>
         </aside>
       </section>

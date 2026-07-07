@@ -3,44 +3,20 @@
 import Link from 'next/link'
 import { useEffect, useState } from 'react'
 
-type Slide = {
-  image: string
-  title: React.ReactNode
-  text: string
-}
-
-const slides: Slide[] = [
+const slides = [
   {
     image: '/images/portfolio/mycie-dachu-czyszczenie-malowanie-elewacji-dom-w-lesie-po.webp',
-    title: (
-      <>
-        Een <span>schoon dak.</span>
-        <br />
-        Een <span>zorgeloos</span> resultaat.
-      </>
-    ),
+    title: <>Een <span>schoon dak.</span><br />Een <span>zorgeloos</span> resultaat.</>,
     text: 'Professionele dak-, gevel- en schoorsteenreiniging met oog voor kwaliteit, detail en een verzorgde afwerking.',
   },
   {
     image: '/images/portfolio/budynek-firmowy-elewacja-po-myciu-chemicznym.webp',
-    title: (
-      <>
-        Reiniging met <span>echte foto’s</span>.
-        <br />
-        Geen filters. Wel <span>resultaat</span>.
-      </>
-    ),
+    title: <>Reiniging met <span>echte foto’s</span>.<br />Geen filters. Wel <span>resultaat</span>.</>,
     text: 'Wij werken met echte projectbeelden, duidelijke communicatie en een aanpak die past bij de ondergrond.',
   },
   {
     image: '/images/portfolio/elewacja-placowki-opiekunczej-po-myciu-chemicznym.webp',
-    title: (
-      <>
-        Een frisse gevel.
-        <br />
-        Een <span>sterke eerste indruk</span>.
-      </>
-    ),
+    title: <>Een frisse gevel.<br />Een <span>sterke eerste indruk</span>.</>,
     text: 'Van particuliere woningen tot bedrijfsgebouwen: wij reinigen veilig, gefaseerd en met aandacht voor duurzaamheid.',
   },
 ]
@@ -85,12 +61,8 @@ export function HeroSection() {
           </div>
 
           <div className="hero-cta-row">
-            <Link href="#offerte" className="button primary">
-              Gratis offerte aanvragen
-            </Link>
-            <Link href="#projecten" className="button ghost-light">
-              Bekijk projecten
-            </Link>
+            <Link href="#offerte" className="button primary">Gratis offerte aanvragen</Link>
+            <Link href="#projecten" className="button ghost-light">Bekijk projecten</Link>
           </div>
 
           <div className="hero-dots" aria-label="Hero slider">
@@ -115,17 +87,13 @@ export function HeroSection() {
             <input type="tel" placeholder="Telefoonnummer" />
             <input type="email" placeholder="E-mailadres" />
             <select defaultValue="">
-              <option value="" disabled>
-                Kies een dienst
-              </option>
+              <option value="" disabled>Kies een dienst</option>
               <option>Dakreiniging</option>
               <option>Gevelreiniging</option>
               <option>Schoorsteenreiniging</option>
             </select>
             <textarea placeholder="Uw bericht (optioneel)" />
-            <button type="submit" className="button form-button">
-              Offerte aanvragen
-            </button>
+            <button type="submit" className="button form-button">Offerte aanvragen</button>
           </form>
           <small>Binnen 24 uur reactie op werkdagen.</small>
         </div>
