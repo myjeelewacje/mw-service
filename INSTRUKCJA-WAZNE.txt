@@ -1,0 +1,34 @@
+TO JEST PEŁNY KOMPLET STRONY MW SERVICE - BEZ FOLDERA OPAKOWANIA
+
+Po rozpakowaniu tego ZIP-a zobaczysz od razu:
+- src
+- public
+- package.json
+- package-lock.json
+- tsconfig.json
+- railway.toml
+- nixpacks.toml
+- .nvmrc
+
+NAJWAŻNIEJSZE:
+Wklej CAŁĄ zawartość ZIP-a do głównego folderu repo mw-service.
+
+W repo musi być tak:
+mw-service/src/components/HeroSection.tsx
+mw-service/src/components/BeforeAfterSlider.tsx
+mw-service/src/data/site.ts
+mw-service/src/data/projects.ts
+mw-service/src/app/page.tsx
+mw-service/tsconfig.json
+
+Nie może być tak:
+mw-service/mw-service-v3-ready/src/...
+
+Jeśli w repo masz folder mw-service-v3-ready, usuń go.
+
+GitHub Desktop:
+Summary:
+Replace with complete MW Service website
+
+Commit to main
+Push origin
