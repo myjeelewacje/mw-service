@@ -1,0 +1,16 @@
+<svg width="260" height="150" viewBox="0 0 260 150" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="MW Service">
+  <rect width="260" height="150" rx="18" fill="white"/>
+  <g transform="translate(20 12)">
+    <path d="M22 63L105 16L190 63" stroke="#123B2B" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M57 43V20H73V34" fill="#123B2B"/>
+    <circle cx="65" cy="15" r="10" fill="#123B2B"/>
+    <path d="M65 0V30M50 15H80M54 4L76 26M76 4L54 26" stroke="#123B2B" stroke-width="3" stroke-linecap="round"/>
+    <path d="M112 45H127V60H112V45ZM132 45H147V60H132V45ZM112 65H127V80H112V65ZM132 65H147V80H132V65Z" fill="#123B2B"/>
+    <path d="M195 42L200 53L211 58L200 63L195 74L190 63L179 58L190 53L195 42Z" fill="#85C51F"/>
+    <path d="M219 68L222 75L229 78L222 81L219 88L216 81L209 78L216 75L219 68Z" fill="#85C51F"/>
+    <path d="M43 116V76H70L94 105L118 76H143L156 116H131L124 93L102 116H87L65 93V116H43Z" fill="#123B2B"/>
+    <path d="M143 76H166L177 103L189 76H209L184 116H165L154 92L143 76Z" fill="#85C51F"/>
+    <path d="M51 135H200" stroke="#85C51F" stroke-width="3" stroke-linecap="round"/>
+    <text x="60" y="132" font-family="Arial, Helvetica, sans-serif" font-size="24" letter-spacing="9" font-weight="700" fill="#123B2B">SERVICE</text>
+  </g>
+</svg>

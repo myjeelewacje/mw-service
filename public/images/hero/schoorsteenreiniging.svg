@@ -1,0 +1,24 @@
+<svg width="1200" height="800" viewBox="0 0 1200 800" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="sky" x1="0" x2="0" y1="0" y2="1"><stop stop-color="#dff0ff"/><stop offset="1" stop-color="#f7fbff"/></linearGradient>
+    <linearGradient id="g" x1="0" x2="1"><stop stop-color="#123B2B"/><stop offset="1" stop-color="#85C51F"/></linearGradient>
+  </defs>
+  <rect width="1200" height="800" fill="url(#sky)"/>
+  <path d="M0 590L1200 420V800H0Z" fill="#123B2B" opacity=".92"/>
+  <path d="M215 530L590 260L965 530" fill="none" stroke="#1a1a1a" stroke-width="46" stroke-linejoin="round"/>
+  <path d="M318 523H883V800H318Z" fill="#f6f4ee"/>
+  <path d="M505 320H634V523H505Z" fill="#7b3f2a"/>
+  <g fill="#9a5942">
+    <rect x="515" y="335" width="45" height="18"/><rect x="570" y="335" width="45" height="18"/>
+    <rect x="532" y="365" width="45" height="18"/><rect x="587" y="365" width="45" height="18"/>
+    <rect x="515" y="395" width="45" height="18"/><rect x="570" y="395" width="45" height="18"/>
+    <rect x="532" y="425" width="45" height="18"/><rect x="587" y="425" width="45" height="18"/>
+  </g>
+  <path d="M295 550L610 315L930 550" fill="none" stroke="url(#g)" stroke-width="18" stroke-linecap="round"/>
+  <circle cx="638" cy="210" r="74" fill="#123B2B"/>
+  <path d="M638 118V302M546 210H730M573 145L703 275M703 145L573 275M638 118V302M585 124L691 296M691 124L585 296" stroke="white" stroke-width="14" stroke-linecap="round"/>
+  <rect x="620" y="75" width="36" height="160" rx="18" fill="#123B2B"/>
+  <circle cx="638" cy="75" r="24" fill="#85C51F"/>
+  <text x="78" y="145" font-family="Arial, Helvetica, sans-serif" font-weight="800" font-size="58" fill="#123B2B">Schoorsteenreiniging</text>
+  <text x="80" y="205" font-family="Arial, Helvetica, sans-serif" font-size="31" fill="#1b2b24">Veilig, grondig en professioneel</text>
+</svg>
