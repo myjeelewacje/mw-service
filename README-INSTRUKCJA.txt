@@ -1,14 +1,11 @@
-MW SERVICE — WERSJA JAK ZAAKCEPTOWANY PODGLĄD
+POPRAWKA — ODSTĘP PRZYCISKÓW I LOGO
 
-Zrobione:
-- ciemny hero jak w zaakceptowanym podglądzie
-- zdjęcie w tle jest ostre i widoczne, bez rozmycia
-- góra/header jest biała, ale przezroczysta
-- formularz jest ciemny/przezroczysty
-- zielone przyciski są mocniejsze
-- logo zostaje czarne, bez tła i bez podmian
-- cache wyłączony w nginx
-- CSS/logo podbite do v8
+Poprawione:
+- większy odstęp między haczykami a przyciskami w hero
+- przyciski nie kleją się już do tekstu
+- nowe czarne logo bez tła, dopasowane do nagłówka
+- napis SERVICE w logo jest większy i czytelniejszy
+- CSS/logo podbite do v9, żeby nie łapało starej wersji
 
 CO ZROBIĆ:
 1. Wejdź do folderu repo mw-service.
@@ -18,7 +15,7 @@ CO ZROBIĆ:
 
 Musi być:
 mw-service/index.html
-mw-service/style-v8.css
+mw-service/style-v9.css
 mw-service/script-v4.js
 mw-service/Dockerfile
 mw-service/nginx.conf.template
@@ -26,16 +23,9 @@ mw-service/railway.toml
 mw-service/images/
 mw-service/projecten/
 
-Nie może być:
-package.json
-package-lock.json
-src/
-tsconfig.json
-nginx.conf
-
 GitHub Desktop:
 Summary:
-Apply approved dark hero design
+Fix hero button spacing and logo
 
 Commit to main
 Push origin
