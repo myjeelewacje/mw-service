@@ -1,12 +1,11 @@
-OSTATECZNA WERSJA STATYCZNA — BEZ NPM, NEXT, REACT I TYPESCRIPT
+POPRAWIONA WERSJA STRONY MW SERVICE
 
-Ta paczka usuwa cały problem z npm install:
-- nie ma package.json
-- nie ma npm install
-- nie ma Next.js
-- nie ma React
-- nie ma TypeScript
-- Railway buduje stronę przez Dockerfile i nginx
+Poprawki:
+- zdjęcia są w paczce
+- hero ma większą wysokość
+- karty z benefitami nie nachodzą na formularz
+- dalej brak npm / Next / TypeScript
+- Railway działa przez Docker + nginx z poprawnym portem PORT
 
 CO ZROBIĆ:
 1. Wejdź do folderu repo mw-service.
@@ -19,20 +18,21 @@ mw-service/index.html
 mw-service/style.css
 mw-service/script.js
 mw-service/Dockerfile
-mw-service/nginx.conf
+mw-service/nginx.conf.template
 mw-service/railway.toml
 mw-service/images/
 mw-service/projecten/
 
 Nie może być:
-mw-service/package.json
-mw-service/src/
-mw-service/tsconfig.json
-mw-service/node_modules/
+package.json
+package-lock.json
+src/
+tsconfig.json
+nginx.conf
 
 GitHub Desktop:
 Summary:
-Replace MW Service with static Docker site
+Fix MW Service layout and images
 
 Commit to main
 Push origin
