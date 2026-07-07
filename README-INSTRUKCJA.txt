@@ -1,12 +1,12 @@
-POPRAWKA MW SERVICE — LOGO I BRAK OVERLAY
+TWARDA POPRAWKA — BEZ CACHE I BEZ OVERLAY
 
-Poprawione:
-- nowe czystsze logo MW Service
-- 4 boksy nie nachodzą już na sekcję główną
-- hero ma normalny układ i odstępy
-- zdjęcia zostają w paczce
+Co zmieniłem:
+- nowy plik CSS: style-v4.css?v=4, żeby przeglądarka nie trzymała starego stylu
+- nowy plik JS: script-v4.js?v=4
+- 4 boksy są w osobnej sekcji pod hero, nie mogą nachodzić na formularz
+- logo uproszczone i bardziej czytelne
 - dalej bez npm / Next / TypeScript
-- Railway działa przez Docker + nginx z poprawnym PORT
+- Railway działa przez Docker + nginx
 
 CO ZROBIĆ:
 1. Wejdź do folderu repo mw-service.
@@ -16,24 +16,19 @@ CO ZROBIĆ:
 
 Musi być:
 mw-service/index.html
-mw-service/style.css
-mw-service/script.js
+mw-service/style-v4.css
+mw-service/script-v4.js
 mw-service/Dockerfile
 mw-service/nginx.conf.template
 mw-service/railway.toml
 mw-service/images/
 mw-service/projecten/
 
-Nie może być:
-package.json
-package-lock.json
-src/
-tsconfig.json
-nginx.conf
-
 GitHub Desktop:
 Summary:
-Fix logo and remove hero overlay
+Hard fix layout cache and logo
 
 Commit to main
 Push origin
+
+Po deployu odśwież stronę przez Ctrl+F5.
