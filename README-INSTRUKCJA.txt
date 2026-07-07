@@ -1,11 +1,12 @@
-POPRAWIONA WERSJA STRONY MW SERVICE
+POPRAWKA MW SERVICE — LOGO I BRAK OVERLAY
 
-Poprawki:
-- zdjęcia są w paczce
-- hero ma większą wysokość
-- karty z benefitami nie nachodzą na formularz
-- dalej brak npm / Next / TypeScript
-- Railway działa przez Docker + nginx z poprawnym portem PORT
+Poprawione:
+- nowe czystsze logo MW Service
+- 4 boksy nie nachodzą już na sekcję główną
+- hero ma normalny układ i odstępy
+- zdjęcia zostają w paczce
+- dalej bez npm / Next / TypeScript
+- Railway działa przez Docker + nginx z poprawnym PORT
 
 CO ZROBIĆ:
 1. Wejdź do folderu repo mw-service.
@@ -32,7 +33,7 @@ nginx.conf
 
 GitHub Desktop:
 Summary:
-Fix MW Service layout and images
+Fix logo and remove hero overlay
 
 Commit to main
 Push origin
