@@ -50,3 +50,39 @@ if(contactForm){
     }
   });
 }
+
+document.addEventListener('DOMContentLoaded', function () {
+  function trackEvent(name, params) {
+    if (typeof window.gtag === 'function') {
+      window.gtag('event', name, params || {});
+    }
+  }
+
+  document.querySelectorAll('a[href^="tel:"]').forEach(function (link) {
+    link.addEventListener('click', function () {
+      trackEvent('phone_click', {
+        event_category: 'contact',
+        event_label: link.getAttribute('href')
+      });
+    });
+  });
+
+  document.querySelectorAll('a[href^="mailto:"]').forEach(function (link) {
+    link.addEventListener('click', function () {
+      trackEvent('email_click', {
+        event_category: 'contact',
+        event_label: link.getAttribute('href')
+      });
+    });
+  });
+
+  var form = document.getElementById('contact-form');
+  if (form) {
+    form.addEventListener('submit', function () {
+      trackEvent('form_submit', {
+        event_category: 'contact',
+        event_label: 'contact_form'
+      });
+    });
+  }
+});
