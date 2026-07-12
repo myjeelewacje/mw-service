@@ -1,4 +1,5 @@
-FROM nginx:1.27-alpine
-COPY nginx.conf.template /etc/nginx/templates/default.conf.template
-COPY . /usr/share/nginx/html
+FROM node:20-alpine
+WORKDIR /app
+COPY . .
 EXPOSE 8080
+CMD ["node", "server.js"]
